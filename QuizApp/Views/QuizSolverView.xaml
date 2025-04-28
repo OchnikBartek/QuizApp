@@ -1,0 +1,19 @@
+<Window x:Class="QuizApplication.Views.QuizSolverView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rozwiąż Quiz" Height="600" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="{Binding CurrentQuestion.Text}" FontSize="20" TextWrapping="Wrap" Margin="0,0,0,10"/>
+            <ItemsControl ItemsSource="{Binding CurrentQuestion.Answers}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Text}" IsChecked="{Binding UserSelected, Mode=TwoWay}" Margin="5"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <Button Content="Następne pytanie" Click="NextQuestion_Click" Margin="0,10,0,0"/>
+            <Button Content="Powrót do Menu" Click="ReturnToMenu_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

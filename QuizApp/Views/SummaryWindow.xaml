@@ -1,0 +1,11 @@
+<Window x:Class="QuizApplication.Views.SummaryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Podsumowanie" Height="300" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="SummaryText" FontSize="20" TextAlignment="Center" Margin="10"/>
+            <Button Content="Powrót do Menu" Click="ReturnToMenu_Click" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
